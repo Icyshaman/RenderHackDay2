@@ -47,7 +47,7 @@ class SBot:
             user_input = data["sentence"].lower()
             if not user_input or not user_input.strip():
                 return jsonify({"error": "No sentence provided"}), 400
-            response = self.classify_intent(user_input)
+            response = self.get_problem_solution(user_input)
             return jsonify({"solution": response}), 200
     
 sbot = SBot()

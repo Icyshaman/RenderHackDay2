@@ -8,7 +8,6 @@ RUN apk update && apk add --no-cache python3 py3-pip py3-virtualenv \
     && python3 -m venv /opt/venv \
     && /opt/venv/bin/pip install --upgrade pip \
     && /opt/venv/bin/pip install -r requirements.txt \
-    && /opt/venv/bin/python -m spacy download en_core_web_sm \
     && rm -rf /var/cache/apk/*
 
 ENV PATH="/opt/venv/bin:$PATH"
